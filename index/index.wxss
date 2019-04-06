@@ -1,0 +1,11 @@
+.image-player-container{
+	width: 100%;
+	height: 750rpx;
+	overflow: hidden;
+	background: #000;
+}
+
+.intro{
+	padding: 30rpx;
+	font-size: 30rpx;
+}

@@ -1,0 +1,20 @@
+<view class="image-player-content">
+    <!-- 图片列表 start -->
+    <view 
+        style="animation-duration: {{animationDuration/1000}}s;" 
+        class="image-item {{currentIndex == index ? (canAnimation ? (item.animate + ' current-img') : 'current-img') : ''}}" 
+        wx:for="{{playerList}}" 
+        wx:key="{{index}}">
+        <image class="img" src="{{item.img}}" mode="aspectFit"></image>
+    </view>
+    <!-- 图片列表 end -->
+
+    <!-- 背景模糊填充 start -->
+    <view 
+    	wx:if="{{needBackground}}" 
+    	class="back-img-blur {{canAnimation ? 'animation-start' : ''}}"
+    	style="opacity: {{backgroundOpacity}};">
+        <image mode="aspectFill" src="{{playerList[currentIndex].img}}"></image>
+    </view>
+    <!-- 背景模糊填充 end -->
+</view>

@@ -1,0 +1,178 @@
+.image-player-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image-player-content .image-item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.image-player-content .image-item.current-img {
+    opacity: 1;
+    z-index: 2;
+}
+
+.image-player-content .image-item .img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.image-player-content .back-img-blur{
+    position: absolute;
+    top: -10rpx;
+    left: -10rpx;
+    bottom: -10rpx;
+    right: -10rpx;
+    opacity: 0.5;
+    z-index: 1;
+    filter: blur(10rpx);
+}
+
+.image-player-content .back-img-blur.animation-start{
+    /*animation: animateback 5s linear infinite;*/
+}
+
+.image-player-content .back-img-blur image{
+    width: 100%;
+    height: 100%;
+}
+
+.animate1 {
+    animation: animate1 5s linear forwards;
+}
+@keyframes animate1 {
+    0% {
+        opacity: 0
+    }
+
+    20% {
+        opacity: 1
+    }
+
+    80% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+.animate2 {
+    animation: animate2 5s linear forwards;
+}
+@keyframes animate2 {
+    0% {
+        transform: translate3d(0,-100%,0)
+    }
+
+    20% {
+        transform: translate3d(0,0,0)
+    }
+
+    80% {
+        transform: translate3d(0,0,0)
+    }
+
+    100% {
+        transform: translate3d(0,100%,0)
+    }
+}
+
+.animate3 {
+    animation: animate3 5s linear forwards
+}
+@keyframes animate3 {
+    0% {
+        filter: blur(50px)
+    }
+
+    20% {
+        filter: blur(0)
+    }
+
+    80% {
+        filter: blur(0);
+        opacity: 1
+    }
+
+    100% {
+        filter: blur(50px);
+        opacity: 0
+    }
+}
+
+.animate4 {
+    transform: translate3d(0,0,0) rotateZ(0);
+    animation: animate4 5s linear forwards
+}
+@keyframes animate4 {
+    0% {
+        transform: translate3d(-100%,0,0) rotateZ(-90deg)
+    }
+
+    20% {
+        transform: translate3d(0,0,0) rotateZ(0)
+    }
+
+    80% {
+        transform: translate3d(0,0,0) rotateZ(0);
+        opacity: 1
+    }
+
+    100% {
+        transform: translate3d(100%,0,0) rotateZ(90deg);
+        opacity: 0
+    }
+}
+
+.animate5 {
+    animation: animate5 5s linear forwards
+}
+@keyframes animate5 {
+    0% {
+        transform: scale(0) rotateZ(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        transform: scale(1) rotateZ(360deg);
+        opacity: 1
+    }
+
+    80% {
+        transform: scale(1) rotateZ(360deg);
+        opacity: 1
+    }
+
+    100% {
+        transform: scale(2) rotateZ(540deg);
+        opacity: 0;
+    }
+}
+
+@keyframes animateback {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.5;
+    }
+
+    80% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0
+    }
+}

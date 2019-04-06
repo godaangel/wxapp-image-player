@@ -1,0 +1,10 @@
+<view class="image-player-container">
+	<image-player
+    imageList="{{backImageUrls}}"
+    needBackground="{{true}}"
+    backgroundOpacity="{{0.6}}"
+    animationDuration="{{4000}}"
+		></image-player>
+</view>
+<view class="intro">图片幻灯片展示组件，随机生成过渡动画，支持配置动画时长、背景填充、填充透明度，必须配置图片List</view>
+<view class="intro">By Godaangel</view>

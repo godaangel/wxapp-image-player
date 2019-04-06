@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+  	"image-player": "../image-player/image-player"
+  }
+}
